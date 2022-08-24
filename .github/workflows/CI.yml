@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Get Docker Version
-        run: docker -v
+        run: docker service update --with-registry-auth --image ghcr.io/danielancines/mypersonalapp:staging_23 MyPersonalAppSvc
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
