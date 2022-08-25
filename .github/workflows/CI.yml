@@ -38,6 +38,12 @@ jobs:
 #         run: docker service update --with-registry-auth --image ghcr.io/danielancines/mypersonalapp:staging_24 MyPersonalAppSvc
 
       # Runs a set of commands using the runners shell
+#       - name: Show Version
+#         run: |
+#           echo ${{ steps.package-version.outputs.current-version }}
+  show-version:
+    runs-on: ubuntu-latest
+    steps:
       - name: Show Version
         run: |
           echo ${{ steps.package-version.outputs.current-version }}
